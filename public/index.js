@@ -146,7 +146,12 @@ var alternateRatingsColors = function() {
 	}
 }
 
-alternateRatingsColors();
+//check if we're on ratings page, then do this.
+if(window.location.pathname.includes('/ratings/'))
+{
+	alternateRatingsColors();
+}
+
 newRatingButton.addEventListener('click',showNewRatingModal);
 cancelButton.addEventListener('click',hideNewRatingModal);
 acceptButton.addEventListener('click',addNewRating);

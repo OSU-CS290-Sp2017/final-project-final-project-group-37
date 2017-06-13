@@ -97,7 +97,6 @@ app.post('/',function(req, res, next) {
 			var ratingsObj = [];
 		}
 		ratingsObj.push(userRating);
-		console.log(ratingsObj);
 		
 		var rating = {
 			user: obj = {
@@ -124,7 +123,7 @@ app.post('/',function(req, res, next) {
 			ratingsData = JSON.parse(ratingsData);
 			
 			//writes to ratings.json. returns 500 error if there's a failure.
-			fs.writeFile('./ratings.json',JSON.stringify(ratingsData), function(err) {
+			fs.writeFile('./ratings.json',JSON.stringify(ratingsData,null,3), function(err) {
 				if(err)
 				{
 					console.log('error after writefile');
