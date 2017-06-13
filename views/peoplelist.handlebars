@@ -2,6 +2,14 @@
 Names of people from ratings.json for People page.
 }}
 
-{{#each user}}
-	<a class="person-link" href="#">{{>person}}</a>
-{{/each}}
+<h2 id="people-header">Click a name to view that person's ratings!</h2>
+
+<ul class="person-list">
+	{{#each user}}
+		<li class="person-item"><a class="person-link" href="/ratings/{{@key}}">{{>person}}</a></li>
+	{{/each}}
+</ul>
+
+{{>newRating}}
+
+{{>newRatingModal}}

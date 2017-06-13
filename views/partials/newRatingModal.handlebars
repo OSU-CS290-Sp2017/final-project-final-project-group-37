@@ -1,0 +1,50 @@
+{{!
+HTML for the modal to create a new rating
+}}
+
+<div id="new-rating-modal-backdrop" class="hidden"></div>
+
+<div id="new-rating-modal" class="hidden">
+
+	<div id="new-rating-modal-header">
+		<h3>Enter new rating!</h3>
+	</div>
+	
+	<div id="new-rating-modal-body">
+		{{#unless personPage}}
+		<div class="rating-input-element">
+			<label for="name-input">Please enter a name</label>
+			<textarea id="name-input"></textarea>
+		</div>
+		{{/unless}}
+		
+		<div class="rating-input-element">
+			<label for="title-input">Please enter a title</label>
+			<textarea id="title-input"></textarea>
+		</div>
+		
+		<div class="rating-input-element">
+			<label for="score-input">Please select a score</label>
+			<select id="score-input">
+				<option value="--">--</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		
+		<div id="new-rating-modal-footer">
+			<button type="button" id="accept-input">Accept</button>
+			<button type="button" id="cancel-input">Cancel</button>
+		</div>
+		
+	</div>
+	
+</div>
